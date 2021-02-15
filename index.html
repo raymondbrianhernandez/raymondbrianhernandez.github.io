@@ -14,6 +14,10 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!--Highlight.js-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/xt256.min.css">
     </head>
 
     <body id="page-top">
@@ -73,7 +77,7 @@
                         <p class="text-white-50">
                             Thank you.   
                         </p>
-                        <p><a href="resume.html">View resume</a>.</p>
+                        <p><h4><a href="resume.html">View resume.</a></h4></p>
                     </div>
                 </div>
             </div>
@@ -92,15 +96,16 @@
                             <h4>Github Repositories</h4>
                             <p class="text-black-50 mb-0">A collection of projects written in Python, C++, Java, HTML5. 
                                 Most projects are developed using Flask and Django framework with Bootstrap. 
-                                Database implementations using mySQL and MongoDB.</p>
+                                Database implementations using MySQL and MongoDB.</p>
                                 <p><a href="https://github.com/raymondbrianhernandez" target="_blank">Check out my repositories at Github</a>.</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project WIP -->    
-                <div class="row justify-content-center no-gutters">
-                    <p><h2><strong>Current Project (Work in Progress)</strong></h2></p>
+                <!--<div class="row justify-content-center no-gutters">-->
+                <div class="jumbotron">
+                    <h2><strong>Current Project I'm Developing</strong></h2>
                 </div>
 
                 <div class="row align-items-center no-gutters mb-4 mb-lg-5">
@@ -123,6 +128,32 @@
                 <div class="row justify-content-center no-gutters">
                     <p><h2><strong>Completed Projects</strong></h2></p>
                 </div>
+                
+                <!-- Project Drone -->
+                <div class="row justify-content-center no-gutters">
+                    <div class="col-lg-6"><a href="blog.html#drone">
+                        <img class="img-fluid" src="assets/img/drone.png" alt="" width=550 height=450/></a>
+                    </div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-white text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-black"><a href="blog.html#drone">FPV RACING DRONE (220mm)</a></h4>
+                                    <p><b>[Betaflight]</b></p>
+                                    <p class="mb-0 text-black-100">Building and configuring your own acrobatic racing drone can be
+                                    both fun and educational.  Here we are building our own racing acrobatic drone while getting familiar with
+                                    its basic components such as flight controllers (FC), electronic speed controllers (esc), transmitter, receiver, 
+                                    and different kinds of motors.  Then the drone assembly will be programmed with Betaflight in 
+                                    comman-line mode (CLI).
+                                    </p>
+                                    <p><a href="blog.html#drone"><b>Check out project's blog.</b></a></p>
+                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->
 
                 <!-- Project Voltes V -->
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
@@ -134,7 +165,7 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4><a href="blog.html#voltes v">VOLTES V CREWZER GAME</a></h4>
-                                    <p><b><a href="blog.html#voltes v">[python/PyGame]</a></b></p>
+                                    <p><b>[Python/PyGame]</b></p>
                                     <p class="mb-0 text-black-100">A classic spaceship shooter retro arcade game 
                                         inspired by the classic Asteroid game.  Voltes V is my favorite mecha-anime 
                                         series from the 70's.  The code explores the collisions properties and how 
@@ -159,7 +190,8 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
                                     <h4 class="text-black"><a href="blog.html#flappy bird">FLAPPY BIRD CLONE</a></h4>
-                                    <p class="mb-0 text-black-100">[Python/Pygame] A clone of the popular Flappy Bird game released for 
+                                    <p><b>[Python/Pygame]</b></p>
+                                    <p class="mb-0 text-black-100">A clone of the popular Flappy Bird game released for 
                                         mobile devices.  The code explores the capabilities of randomized pipe heights, 
                                         collisions, and 2D scrolling.
                                     </p>
@@ -182,7 +214,8 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-black"><a href="blog.html#excel encrypt">EXCEL ENCRYPT DATA</a></h4>
-                                    <p class="mb-0 text-black-100">[Python/Panda/ItsDangerous] A script to encrypt excel data files.  
+                                    <p><b>[Python/Panda/ItsDangerous]</b></p>
+                                    <p class="mb-0 text-black-100">A script to encrypt excel data files.  
                                         Encrypts and decrypts the excel file using a master key.  
                                         Ideal for data scientists who needs to keep data secured.​    
                                     </p>
@@ -205,7 +238,8 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
                                     <h4 class="text-black"><a href="blog.html#phone witnessing">PHONE WITNESSING TOOL</a></h4>
-                                    <p class="mb-0 text-black-100">[Python/PyQt5/BeautifulSoup/URLlib.request] 
+                                    <p><b>[Python/PyQt5/BeautifulSoup/URLlib.request]</b></p>
+                                    <p class="mb-0 text-black-100"> 
                                         A program that parses and scrapes data from public white pages directory 
                                         and family ancestry to gather information about a caller ID.
                                     </p>
@@ -228,7 +262,8 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-black"><a href="blog.html#retro">90'S STYLE GEOCITIES WEBSPACE</a></h4>
-                                    <p class="mb-0 text-black-100">[HTML5/CSS/Bootstrap] An homage to Geocities Webspace maker
+                                    <p><b>[HTML5/CSS/Bootstrap]</b></p>
+                                    <p class="mb-0 text-black-100">An homage to Geocities Webspace maker
                                         where almost everyone posted anything on the internet.  Of course, the dancing baby
                                         GIF is a staple. ​    
                                     </p>
@@ -244,14 +279,15 @@
                 <!-- Project Audio Recorder -->
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-6"><a href="blog.html#audio recorder">
-                        <img class="img-fluid" src="assets/img/arduino.png" alt="" width=550 height=450/></a>
+                        <img class="img-fluid" src="assets/img/Arduino_Uno_-_R3.jpg" alt="" width=600 height=600/></a>
                     </div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-white text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
                                     <h4 class="text-black"><a href="blog.html#audio recorder">ARDUINO AUDIO RECORDER</a></h4>
-                                    <p class="mb-0 text-black-100">[C++/Arduino] Designed an audio recorder for both 
+                                    <p><b>[C++/Arduino]</b></p>
+                                    <p class="mb-0 text-black-100">Designed an audio recorder for both 
                                         lines in audio signals and microphone signals that enables to be recorded in 
                                         an SD card at 44.1 kHz sample rate using 16-bit samples.  Pre-amplifier and 
                                         output amplifier are designed using PSPICE using 741 op-amp chip, discreet components, 
@@ -269,14 +305,15 @@
                 <!-- Project Pocket Uni -->
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
                     <div class="col-lg-6"><a href="blog.html#pocket uni">
-                        <img class="img-fluid" src="assets/img/pexels-photo-193004.jpeg" alt="" width=550 height=450/></a>
+                        <img class="img-fluid" src="assets/img/pocketUNI.png" alt="" width=550 height=450/></a>
                     </div>
                     <div class="col-lg-6">
                         <div class="bg-white text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h4 class="text-black"><a href="blog.html#pocket uni">POCKET-UNI MOBILE APP</a></h4>
-                                    <p class="mb-0 text-black-100">[Java/mySQL] an app for Android devices to assist students in their academics.  
+                                    <p><b>[Java/MySQL]</b></p>
+                                    <p class="mb-0 text-black-100">An app for Android devices to assist students in their academics.  
                                         It features an assignment manager, messaging service, and a market like Craigslist.  
                                         Students need to use their CSUN email to sign-up for security.  Coded in Javascript using Android Studio.  
                                         Registered users are managed through a MySQL database. ​    
@@ -290,7 +327,7 @@
                 </div>
                 <!-- end -->
 
-                <!-- Project 8 Row-->
+                <!-- Project Auto-Zoom -->
                 <div class="row justify-content-center no-gutters">
                     <div class="col-lg-6"><a href="blog.html#auto-zoom">
                         <img class="img-fluid" src="assets/img/zoom.png" alt="" width=550 height=450/></a>
@@ -300,7 +337,8 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-right">
                                     <h4 class="text-black"><a href="blog.html#auto-zoom">ZOOM AUTO-JOIN/HOST</a></h4>
-                                    <p class="mb-0 text-black-100">[Python/Schedule/PyAutoGui] A script to automate Zoom hosting
+                                    <p><b>[Python/Scheduler/PyAutoGui]</b></p>
+                                    <p class="mb-0 text-black-100">A script to automate Zoom hosting
                                         by specified date and time.  Customizable options too, such as automating various 
                                         functions such as disabling waiting rooms, muting all participants, and ending the meeting
                                         on a time limit.  It also can join an existing meeting by saving the meeting ID and password
@@ -308,6 +346,31 @@
                                     </p>
                                     <p><a href="blog.html#auto-zoom"><b>Check out project's blog.</b></a></p>
                                     <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end -->
+                
+                <!-- Project Breathalyzer -->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <div class="col-lg-6"><a href="blog.html#breathalyzer">
+                        <img class="img-fluid" src="assets/img/zybo-0.png" alt="" width=600 height=467/></a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bg-white text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-black"><a href="blog.html#breathalyzer">BREATHALYZER</a></h4>
+                                    <p><b>[VHDL/Zybo Zynq-7000]</b></p>
+                                    <p class="mb-0 text-black-100">A breathalyzer is a device for estimating blood alcohol 
+                                    content (BAC) from a breath sample.  Law enforcements currently use this device to approximately measure 
+                                    the alcohol level in the blood by breath sample.  In the U.S., it is illegal to operate any vehicle if 
+                                    the approximated bac is greater than or equal to 0.08%.  Still, an accurate test would be a blood sample.​    
+                                    </p>
+                                    <p><a href="blog.html#breathalyzer"><b>Check out project's blog.</b></a></p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
                             </div>
                         </div>
@@ -341,7 +404,7 @@
             
         </section>
         <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © arbhie.com 2020 - 2021</div></footer>
+        <footer class="footer bg-black text-center text-white-50"><div class="container">Copyright © arbhie.com 2020 - 2021</div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -351,4 +414,3 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
-
