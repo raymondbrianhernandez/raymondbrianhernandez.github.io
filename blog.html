@@ -14,6 +14,10 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!--Highlight.js-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/xt256.min.css">
     </head>
 
     <body id="page-top">
@@ -58,7 +62,7 @@
                             Here you can see a more detailed look at my past projects, and any current projects still in progress.  
                             Repositories hosted at <a href="https://github.com/raymondbrianhernandez" target="blank"><b>GitHub.</b></a>  
                         </p>
-                        <!-- <p style="text-align:center"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/github-logosmall.png" alt="" /></p> -->
+                         <p style="text-align:center"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/github-logosmall.png" alt="" /></p> 
                     </div>
                 </div>
             </div>
@@ -74,25 +78,55 @@
                     <div class="col-lg-0">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
                                     <h4 class="text-white">RV Records (Work in Progress)</h4>
                                     <p class="mb-0 text-white-50">
-                                        [python/Flask/MongoDB/CSS/Bootstrap]
-                                    </p>
+                                        <em>Started: January 28, 2021</em>
+                                  </p>
                                     <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                         sed do eiusmod tempor incididunt ut labore et dolore 
                                     </p>
                                         <pre class="mb-0 text-white-50">
-                                            <code language=Python>
-                                                import PyQt5
-                                                    test()
+                                            <code class="language-python">
+import PyQt5
 
-                                                def test():
-                                                    print("Hello World!")
+test()
+
+def test():
+    x = 2
+    for i in x:
+        print("Hello World!")
                                             </code>
                                         </pre>
                                     <p class="mb-0 text-white-50">
                                         esse cillum dolore eu 
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                                        qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                    
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Blog -->
+                
+                <!-- Drone Blog -->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0" id="drone">
+            
+                    <div class="col-lg-0">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
+                                    <h4 class="text-white">F.P.V. RACING DRONE (220mm)</h4>
+                                    <p class="mb-0 text-white-50">
+                                        <em>December 27, 2016</em>
+                                    </p>
+                                    <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                                         fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
                                         qui officia deserunt mollit anim id est laborum.
                                     </p>
@@ -111,10 +145,10 @@
                     <div class="col-lg-0">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
                                     <h4 class="text-white">VOLTES V CREWZER GAME</h4>
                                     <p class="mb-0 text-white-50">
-                                        :: [ python | pygame ] ::
+                                        <em>December 27, 2016</em>
                                     </p>
                                     <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -138,10 +172,10 @@
                     <div class="col-lg-0">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
                                     <h4 class="text-white">FLAPPY BIRD CLONE</h4>
                                     <p class="mb-0 text-white-50">
-                                        :: [ python | pygame ] ::
+                                        <em>December 27, 2016</em>
                                     </p>
                                     <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -165,8 +199,11 @@
                     <div class="col-lg-0">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
                                     <h4 class="text-white">EXCEL ENCRYPT DATA</h4>
+                                    <p class="mb-0 text-white-50">
+                                        <em>December 27, 2016</em>
+                                    </p>
                                     <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -189,10 +226,10 @@
                     <div class="col-lg-0">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
                                     <h4 class="text-white">PHONE WITNESSING TOOL</h4>
                                     <p class="mb-0 text-white-50">
-                                        :: [ python | pygame ] ::
+                                        <em>December 27, 2016</em>
                                     </p>
                                     <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -216,10 +253,10 @@
                     <div class="col-lg-0">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
                                     <h4 class="text-white">90'S STYLE GEOCITIES WEBSPACE</h4>
                                     <p class="mb-0 text-white-50">
-                                        :: [ python | pygame ] ::
+                                        <em>December 27, 2016</em>
                                     </p>
                                     <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -243,8 +280,11 @@
                     <div class="col-lg-0">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
                                     <h4 class="text-white">ARDUINO AUDIO RECORDER</h4>
+                                    <p class="mb-0 text-white-50">
+                                        <em>December 27, 2016</em>
+                                    </p>
                                     <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -267,10 +307,10 @@
                     <div class="col-lg-0">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
                                     <h4 class="text-white">POCKET-UNI MOBILE APP</h4>
                                     <p class="mb-0 text-white-50">
-                                        :: [ python | pygame ] ::
+                                        <em>December 27, 2016</em>
                                     </p>
                                     <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -294,10 +334,37 @@
                     <div class="col-lg-0">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
                                     <h4 class="text-white">ZOOM AUTO-JOIN/HOST</h4>
                                     <p class="mb-0 text-white-50">
-                                        :: [ python | pygame ] ::
+                                        <em>December 27, 2016</em>
+                                    </p>
+                                    <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                                        qui officia deserunt mollit anim id est laborum.
+                                    </p>
+                                    
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Blog -->
+                
+                <!-- Breathalyzer Blog -->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0" ID="breathalyzer">
+            
+                    <div class="col-lg-0">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
+                                    <h4 class="text-white">BREATHALYZER</h4>
+                                    <p class="mb-0 text-white-50">
+                                        <em>December 27, 2016</em>
                                     </p>
                                     <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
