@@ -109,6 +109,97 @@ def test():
                 </div>
                 <!-- End Blog -->
                 
+                <!-- Zoom Buttons Blog -->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0" id="zoom buttons">
+            
+                    <div class="col-lg-0">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-left text-lg-left">
+                                    <a class="text-white">Zoom Buttons</a>
+                                    <p class="mb-0 text-white-50">February 15, 2021 
+                                    <h4><a href="https://github.com/raymondbrianhernandez/ZoomButtons">View GitHub Repository</a></h4>
+                                    <p></p>
+                                    <p class="mb-0 text-white-50">
+                                        <ul class="mb-0 text-white-50">Build of Materials (BOM):
+                                        	<li>ATTiny85 Microcontroller</li>
+                                            <li>USB cable</li>
+                                            <li>(3x) Momentary Switch</li>
+                                            <li>(3x) 10k Resistors</li>
+                                        </ul>
+                                    </p>
+                                    </p>
+                                        <pre class="mb-0 text-white-50">
+                                            <code class="language-C++">
+#include OneButton.h
+#include DigiKeyboardFr.h
+
+int button1pin = 0;
+int button2pin = 3;
+int button3pin = 2;
+OneButton button1(button1pin, true);
+OneButton button2(button2pin, true);
+OneButton button3(button3pin, true);
+
+void setup() {
+  button1.attachClick(click1);
+  button2.attachClick(click2);
+  button3.attachClick(click3);
+
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay(500);
+}
+
+void loop() {
+  button1.tick();
+  button2.tick();
+  button3.tick();
+}
+
+// Alt-A - Turn On/Off Microphone
+void click1() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.sendKeyStroke(0, MOD_SHIFT_LEFT | MOD_CONTROL_LEFT | MOD_ALT_LEFT);
+  DigiKeyboard.delay(100); 
+  DigiKeyboard.sendKeyStroke(KEY_A, MOD_ALT_LEFT);
+} 
+
+// Alt-Y - Raise/Lower Hand
+void click2() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.sendKeyStroke(0, MOD_SHIFT_LEFT | MOD_CONTROL_LEFT | MOD_ALT_LEFT);
+  DigiKeyboard.delay(100); 
+  DigiKeyboard.sendKeyStroke(KEY_Y, MOD_ALT_LEFT);
+} 
+
+// Alt-V - Turn On/Off Video
+void click3() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.sendKeyStroke(0, MOD_SHIFT_LEFT | MOD_CONTROL_LEFT | MOD_ALT_LEFT);
+  DigiKeyboard.delay(100); 
+  DigiKeyboard.sendKeyStroke(KEY_V, MOD_ALT_LEFT);
+} 
+                                            </code>
+                                        </pre>
+                                    <p class="mb-0 text-white-50">
+                                        The ATTiny85 board is compatible with the Arduino Bootloader to flash the firmware.  The schematics is straightforward.
+                                        Three 10k pull-up resistors are needed to avoid floating points.  A mometary "tap" to ground by the momentary swicth will
+                                        call the click() function to invoke the built-in Zoom shorthand commands.  Alt+A for audio, Alt+V for Video, and Alt+Y 
+                                        to raise hands.
+                                    </p>
+                                    <p>
+                                    	<br>
+                                    	<img src="assets/img/zoomButtonsSchematic.PNG" alt="schematics" width="550" height="450"/>
+                                    </p>
+                                    
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Blog -->
+                
                 <!-- Drone Blog -->
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0" id="drone">
             
