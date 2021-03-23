@@ -36,7 +36,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#projects">Projects</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="blog.html#blog">Blog</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html#signup">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="retro.html">Credits</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="credits.html">Credits</a></li>
                     </ul>
                 </div>
             </div>
@@ -82,14 +82,78 @@
                                     <h4 class="text-white">RV Records (Work in Progress)</h4>
                                     <p class="mb-0 text-white-50">
                                         <em>Started: January 28, 2021</em>
-                                  </p>
-                                    <p class="mb-0 text-white-50">Coming soon! 
+                                  	</p>
+                                    <p class="mb-0 text-white-50">
+                                    This project is created with the Flask Framework to handle the UI/UX and database using MongoDB.  This project 
+                                    has three parts - the frontend utilizing the Jinja templates, backend with Werkzeug tools, and routings using 
+                                    Python scripts.  The core of the project is managing the routes for each application.
+                                    </p>
+                                    <p class="mb-0 text-white-50">
+                                     
                                     </p>
                                         <pre class="mb-0 text-white-50">
                                             <code class="language-python">
-def test():
-    for i in range(2):
-        print("Hello World!")
+from application import app, db, api, flask_change_password
+from flask import render_template, request, json, jsonify, Response, redirect, flash, url_for, session
+from application.models import User, Namelist
+from application.forms import LoginForm, RegisterForm, RecordsForm
+from flask_restplus import Resource
+
+#######################################################
+
+@api.route('/api', '/api/')
+class GetAndPost(Resource):
+//
+
+@api.route('/api/<idx>')
+class GetUpdateDelete(Resource):
+//
+#######################################################
+
+@app.route("/")
+@app.route("/index")
+@app.route("/home")
+def index():
+    return render_template("index.html", index=True)
+
+@app.route("/login", methods=['GET', 'POST'])
+//    
+    return render_template("login.html", title="Login", form=form, login=True)
+
+@app.route("/logout")
+def logout():
+//
+    return redirect(url_for('login'))
+
+@app.route("/register", methods=['POST', 'GET'])
+def register():
+//
+    return render_template("register.html", title="Register", form=form, register=True)
+
+@app.route("/password", methods=['POST', 'GET'])
+def password():
+//
+    return render_template("password.html", title="Change Password", form=form, register=True)
+
+@app.route("/records", methods=['POST', 'GET'])
+def records():
+//
+    return render_template("records.html", users=rvlist, form=form, records=True)
+
+@app.route("/support")
+def support():
+    return render_template("support.html", support=True)
+
+@app.route("/user")
+def user():
+//
+    return render_template("user.html", users=users)
+
+@app.route("/account")
+def account():
+//
+    return render_template("account.html", users=logged_users, account=True)
+
                                             </code>
                                         </pre>
                                     <p class="mb-0 text-white-50">
@@ -117,11 +181,12 @@ def test():
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-left text-lg-left">
                                     <a class="text-white">Zoom Buttons</a>
-                                    <p class="mb-0 text-white-50">February 15, 2021 
+                                    <p class="mb-0 text-white-50">
+                                    	<em>February 15, 2021</em> 
                                     <h4><a href="https://github.com/raymondbrianhernandez/ZoomButtons">View GitHub Repository</a></h4>
                                     <p></p>
                                     <p class="mb-0 text-white-50">
-                                        <ul class="mb-0 text-white-50">Build of Materials (BOM):
+                                        <ul class="mb-0 text-white-50"><h4>Build of Materials (BOM):</h4>
                                         	<li>ATTiny85 Microcontroller</li>
                                             <li>USB cable</li>
                                             <li>(3x) Momentary Switch</li>
@@ -130,7 +195,7 @@ def test():
                                     </p>
                                     </p>
                                         <pre class="mb-0 text-white-50">
-                                            <code class="language-C++">
+                                            <code class="language-cpp">
 #include OneButton.h
 #include DigiKeyboardFr.h
 
@@ -209,14 +274,33 @@ void click3() {
                                 <div class="project-text w-100 my-auto text-left text-lg-left">
                                     <h4 class="text-white">F.P.V. RACING DRONE (220mm)</h4>
                                     <p class="mb-0 text-white-50">
-                                        <em>December 27, 2016</em>
+                                        <em>November 11, 2019</em>
                                     </p>
-                                    <p class="mb-0 text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-                                        qui officia deserunt mollit anim id est laborum.
+                                    <p class="mb-0 text-white-50">
+                                        <ul class="mb-0 text-white-50"><h4>Build of Materials (BOM):</h4>
+                                        	<li>Quadcopter Carbon Fiber Frame</li>
+                                            <li>FPV Camera</li>
+                                            <li>Video Transmitter</li>
+                                            <li>Radio Receiver</li>
+                                            <li>FPV Antenna</li>
+                                            <li>Electronic Speed Controller (ESC)</li>
+                                            <li>(4x) Propellers</li>
+                                            <li>Flight Controller (FC)</li>
+                                            <li>Quadcopter Carbon Fiber Frame</li>
+                                            <li>Power Distribution Board (PDB)</li>
+                                            <li>(4x) Brushless Motors</li>
+                                            <li>LiPo Battery</li>
+                                            <li>Radio Transmitter</li>
+                                            <li>FPV Goggles</li>
+                                            <li>Video Receiver</li>
+                                        </ul>
+                                    </p>
+                                    <p class="mb-0 text-white-50">I won't post a tutorial on how I assembled or programmed the FPV Drone since
+                                    there's multiple resources already available online.
+                                    </p>
+                                    <p>
+                                    	<br>
+                                    	<img src="assets/img/Drone (1).PNG" alt="schematics" width="550" height="450"/>
                                     </p>
                                     
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
@@ -486,6 +570,7 @@ void click3() {
                             <a href="https://www.linkedin.com/in/raymond-brian-d-hernandez-msem-a0510a71/" target="blank">
                                 <img src="assets/img/linkedin.png" width="150" height="50">
                             </a>
+                            <p><img src="assets/img/arbhieLOGO.png" width="450" height="350" alt="LinkedIn"></p>
                         </p>
                     </div>
                 </div>
